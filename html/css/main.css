@@ -1,7 +1,10 @@
-body {
-    font-family: Arial;
+
+.linkable {
+    cursor: hand;
+    cursor: pointer;
 }
 
-h1 {
-    color: blue;
+.grid {
+    width: 600px;
+    height: 600px;
 }

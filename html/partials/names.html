@@ -1,0 +1,32 @@
+<div>
+    <p class="alert" ng-show="notice">{{notice}}</p>
+    <div class="span5">
+        <h3>Crazy Names</h3>
+        <table class="table span5">
+            <tr ng-repeat="name in names">
+                <td><input type="checkbox" ng-click="nameChange()" ng-model="name.selected"></td>
+                <td class="linkable" ng-click="sendDirectEmail(name.name)">{{name.name}}</td>
+            </tr>
+        </table>
+        <br>
+        <button class="btn" ng-disabled="notice" ng-click="sendEmail()">Send Mail</button>
+    </div>
+    
+    <div class="modal hide fade">
+        <div class="modal-header">
+            <h3>Sending Email</h3>
+        </div>
+        <div class="modal-body">
+            Recipients <input disabled type="text" ng-model="recipients"><br>
+            Text Entry <textarea ng-model="text"></textarea><br>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" ng-click="submit()">Send</button>
+            <button class="btn" ng-click="cancelEmail()">Cancel</button>
+        </div>
+    </div>
+
+</div>
+<script>
+
+</script>
